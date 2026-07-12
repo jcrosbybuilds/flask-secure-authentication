@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Sol Fa Fun Studio{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="./static/images/logo.png">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class ="header">
+        <div id="content">
+            <img src="./static/images/logo.png">
+        </div>
+        <h1>Welcome to Sol Fa Fun Studio's Flask Site</h1>
+    </div>
+
+    <!-- Nav Bars -->
+    <div class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {% if session.get('user') %}
+                <li><a href="/update_password">Update Password</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% endif %}
+        </ul>
+    </div>
+  
+
+    <hr> <!-- This is "horizontal rule", which adds a horizontal line or break across the page-->
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>&copy; 2025 - My Site</p>
+    </footer>
+</body>
+</html>

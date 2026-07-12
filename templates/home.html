@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome to the home page of the Sol Fa Fun Studio website!</p>
+
+
+
+ <div class="jumbotron">
+      <img src="./static/images/7443.jpg">
+    </div>
+
+     <div class="offer">
+      <div id="info">
+        <h2>Lessons Offered</h2>
+      </div>
+     </div>
+
+     <!-- Main Body Info -->
+      <div class="main">
+        <div id="piano">
+          <img src="./static/images/piano.jpg" alt="piano" height="50%">
+          <h2><a href="#" class="button">Piano</a></h2>
+        </div>
+
+        <div id="sing">
+          <img src="./static/images/choir.jpg" alt="choir" height="50%">
+          <h2><a href="#" class="button">Singing</a></h2>
+        </div>
+
+        <div id="health">
+          <img src="./static/images/throat.jpg" alt="throat">
+          <h2><a href="#" class="button">Vocal Health</a></h2>
+        </div>
+
+        <div id="reading">
+          <img src="./static/images/sheet_music.jpg" alt="sheet music" height="55%">
+          <h2><a href="#" class="button">Sight Reading & Music Literacy</a></h2>
+        </div>
+
+      </div>
+
+
+<h3>Class Schedule</h3>
+<table border="1">
+    <tr>
+        <th>Class</th>
+        <th>Day</th>
+        <th>Time</th>
+    </tr>
+    <tr>
+        <td>Piano</td>
+        <td>Monday</td>
+        <td>3:00 PM</td>
+    </tr>
+    <tr>
+        <td>Choir</td>
+        <td>Wednesday</td>
+        <td>4:00 PM</td>
+    </tr>
+    <tr>
+        <td>Voice</td>
+        <td>Friday</td>
+        <td>5:00 PM</td>
+    </tr>
+    <tr>
+        <td>Group Jam</td>
+        <td>Saturday</td>
+        <td>10:00 AM</td>
+    </tr>
+</table>
+
+<h3>NIH Studies</h3>
+<ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/36908211/" target="_blank">Vocal Health</a></li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5618809/" target="_blank">Music and the Brain</a></li>
+    <li><a href="https://www.ncbi.nlm.nih.gov/search/research-news/19199/" target="_blank">Singing is Good for You</a></li>
+</ul>
+
+<p>Current Date and Time: <strong>{{ time }}</strong></p>
+{% endblock %}

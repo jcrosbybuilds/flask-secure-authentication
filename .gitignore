@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+
+# Runtime data
+password_file.txt
+failed_logins.log
+
+# Environment variables
+.env
+
+# Operating system files
+.DS_Store
+Thumbs.db

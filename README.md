@@ -72,27 +72,49 @@ This project was developed using the following technologies:
 ## Testing
 
 ---
-The application was manually tested to verify functionality, HTML structure, navigation, and project organization. All required features were successfully validated.
+The application was manually tested to verify authentication, account management, password security, session handling, and input validation. Both successful workflows and invalid user actions were tested to ensure secure behavior.
 
-### Test Scenarios
+### Authentication Testing
 
-- Dynamic date and time display updates without restarting the application
-- Navigation between Home, About, and Contact pages using Flask routing
-- Proper rendering of templates using `render_template()`
-- HTML semantic elements including headings, paragraphs, comments, ordered lists, and unordered lists
-- External resource links open correctly in a new browser tab
-- Flask project structure follows recommended organization (`templates/` and `static/` directories)
-- Static assets and page styling load correctly across all pages
+- User registration with valid credentials
+- Persistent account storage across application restarts
+- Successful user login and logout
+- Invalid username rejection
+- Invalid password rejection
+- Incorrect username/password combinations handled securely
+- Duplicate username detection
+- Required username and password fields enforced
 
-### Code Quality
+### Password Security Testing
 
-The project was analyzed using **Pylint**. After improving documentation, import organization, and formatting, the application achieved a perfect score of:
+- Username minimum length validation
+- Password complexity requirements enforced
+- Password updates using the current password
+- Incorrect current password rejection
+- Common password detection and rejection
+- Successful password updates using secure validation
 
-**10.00 / 10.00**
+### Security Testing
+
+- Failed login attempts recorded with timestamp, username, and IP address
+- Protected pages require authentication
+- Session isolation verified by attempting to access authenticated pages from a different browser
+- Unauthorized users redirected to the login page
+
+### Application Testing
+
+- Navigation between all application pages
+- Images, tables, and static assets loaded correctly
+- Flask templates rendered properly
+- User interface validated across all implemented features
+
+### Static Analysis
+
+The project was analyzed using **Pylint** throughout development. Code quality improvements included documentation, import organization, and general refactoring, resulting in a final score above **9/10** while maintaining application functionality.
 
 ### Result
 
-All functional and structural tests passed successfully.
+All authentication, security, and application functionality tests passed successfully.
 
 ## Installation
 
